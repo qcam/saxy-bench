@@ -1,4 +1,18 @@
-# Benchmarking Saxy
+# Saxy Bench
+
+The benchmarking suite of [Saxy](https://github.com/qcam/saxy).
+
+## TL;DR report
+
+The benchmark result shows:
+
+For simple XML, Saxy is 1.5 times faster than Erlsom.
+
+For large and nested XML, Saxy is noticeably faster than Erlsom with 4.35 times.
+
+## Benchmark results
+
+### Machine information
 
 ```
 Operating System: macOS
@@ -15,9 +29,9 @@ inputs: none specified
 Estimated total run time: 24 s
 ```
 
-## SAX binary XML parsing
+### SAX parser
 
-### Hackernoon
+#### [Hackernoon RSS](https://hackernoon.com/feed)
 
 ```
 Name             ips        average  deviation         median         99th %
@@ -29,7 +43,7 @@ saxy          437.79
 erlsom        275.23 - 1.59x slower
 ```
 
-### Reddit RSS
+### [/r/sweden Reddit RSS (Unicode characters)](https://www.reddit.com/r/sweden/.rss)
 
 ```
 Name             ips        average  deviation         median         99th %
@@ -41,7 +55,7 @@ saxy          582.05
 erlsom        386.85 - 1.50x slower
 ```
 
-### Soccer (1.1MB XML file)
+### Nested XML document
 
 ```
 Name             ips        average  deviation         median         99th %
@@ -55,7 +69,7 @@ erlsom          3.53 - 4.35x slower
 
 ## Simple Form parsing
 
-### Hackernoon
+#### [Hackernoon RSS](https://hackernoon.com/feed)
 
 ```
 Name             ips        average  deviation         median         99th %
@@ -67,7 +81,7 @@ saxy          421.99
 erlsom        286.80 - 1.47x slower
 ```
 
-### Reddit RSS
+### [/r/sweden Reddit RSS (Unicode characters)](https://www.reddit.com/r/sweden/.rss)
 
 ```
 Name             ips        average  deviation         median         99th %
@@ -79,7 +93,7 @@ saxy          565.88
 erlsom        409.14 - 1.38x slower
 ```
 
-### Soccer (1.1MB XML file)
+### Nested XML document
 
 ```
 Name             ips        average  deviation         median         99th %
@@ -93,7 +107,7 @@ erlsom          3.05 - 4.62x slower
 
 ## Streaming parsing
 
-### Soccer (1.1MB XML file)
+### Nested XML document (1.1 MB)
 
 ```
 Name                    ips        average  deviation         median         99th %
@@ -109,7 +123,7 @@ erlsom.stream          4.68 - 3.00x slower
 erlsom.binary          3.52 - 3.99x slower
 ```
 
-### 30MB file
+### Large XML document (30 MB)
 
 ```
 Name                    ips        average  deviation         median         99th %
