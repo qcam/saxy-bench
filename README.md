@@ -201,3 +201,35 @@ saxy                        7067.60
 xml_builder no format         42.14 - 167.72x slower
 xml_builder indented           0.39 - 18114.15x slower
 ```
+
+### `mix bench.encode.long`
+
+```
+Operating System: macOS
+CPU Information: Intel(R) Core(TM) i7-6567U CPU @ 3.30GHz
+Number of Available Cores: 4
+Available memory: 16 GB
+Elixir 1.6.5
+Erlang 20.3.4
+Benchmark suite executing with the following configuration:
+warmup: 2 s
+time: 5 s
+parallel: 1
+inputs: none specified
+Estimated total run time: 21 s
+
+
+Benchmarking saxy...
+Benchmarking xml_builder indented...
+Benchmarking xml_builder no format...
+
+Name                            ips        average  deviation         median         99th %
+saxy                        1804.05        0.55 ms    ±19.71%        0.51 ms        0.95 ms
+xml_builder indented         700.51        1.43 ms     ±7.49%        1.41 ms        1.84 ms
+xml_builder no format        695.21        1.44 ms    ±10.44%        1.41 ms        2.04 ms
+
+Comparison:
+saxy                        1804.05
+xml_builder indented         700.51 - 2.58x slower
+xml_builder no format        695.21 - 2.59x slower
+```
