@@ -138,3 +138,32 @@ saxy.stream           0.189 - 1.31x slower
 erlsom.stream         0.160 - 1.54x slower
 erlsom.binary         0.133 - 1.86x slower
 ```
+
+## Encoding
+
+```
+Operating System: macOS
+CPU Information: Intel(R) Core(TM) i7-6567U CPU @ 3.30GHz
+Number of Available Cores: 4
+Available memory: 16 GB
+Elixir 1.6.5
+Erlang 20.3.4
+Benchmark suite executing with the following configuration:
+warmup: 2 s
+time: 5 s
+parallel: 1
+inputs: none specified
+Estimated total run time: 14 s
+
+
+Benchmarking saxy...
+Benchmarking xml_builder...
+
+Name                  ips        average  deviation         median         99th %
+saxy             531.20 K        1.88 μs  ±2607.67%           2 μs           3 μs
+xml_builder       58.35 K       17.14 μs   ±123.35%          16 μs       38.96 μs
+
+Comparison:
+saxy             531.20 K
+xml_builder       58.35 K - 9.10x slower
+```

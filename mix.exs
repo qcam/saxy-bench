@@ -21,8 +21,9 @@ defmodule SaxyBench.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:saxy, github: "qcam/saxy"},
+      {:saxy, github: "qcam/saxy", branch: "cam/builder"},
       {:erlsom, "~> 1.4"},
+      {:xml_builder, "~> 2.0"},
       {:benchee, ">= 0.0.0"}
     ]
   end
