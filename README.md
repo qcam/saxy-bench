@@ -141,6 +141,8 @@ erlsom.binary         0.133 - 1.86x slower
 
 ## Encoding
 
+### `mix bench.encode.simple`
+
 ```
 Operating System: macOS
 CPU Information: Intel(R) Core(TM) i7-6567U CPU @ 3.30GHz
@@ -166,4 +168,36 @@ xml_builder       58.35 K       17.14 μs   ±123.35%          16 μs       38.9
 Comparison:
 saxy             531.20 K
 xml_builder       58.35 K - 9.10x slower
+```
+
+### `mix bench.encode.nested`
+
+```
+Operating System: macOS
+CPU Information: Intel(R) Core(TM) i7-6567U CPU @ 3.30GHz
+Number of Available Cores: 4
+Available memory: 16 GB
+Elixir 1.6.5
+Erlang 20.3.4
+Benchmark suite executing with the following configuration:
+warmup: 2 s
+time: 5 s
+parallel: 1
+inputs: none specified
+Estimated total run time: 21 s
+
+
+Benchmarking saxy...
+Benchmarking xml_builder indented...
+Benchmarking xml_builder no format...
+
+Name                            ips        average  deviation         median         99th %
+saxy                        7067.60      0.00014 s    ±12.67%      0.00014 s      0.00022 s
+xml_builder no format         42.14       0.0237 s     ±6.64%       0.0236 s       0.0265 s
+xml_builder indented           0.39         2.56 s     ±0.13%         2.56 s         2.57 s
+
+Comparison:
+saxy                        7067.60
+xml_builder no format         42.14 - 167.72x slower
+xml_builder indented           0.39 - 18114.15x slower
 ```
