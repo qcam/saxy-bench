@@ -16,7 +16,7 @@ defmodule Mix.Tasks.Bench.Encode.Nested do
       end)
 
     Benchee.run(%{
-      "saxy" => fn -> Saxy.Encoder.encode(saxy_document) end,
+      "saxy" => fn -> Saxy.encode!(saxy_document) end,
       "xml_builder no format" => fn -> XmlBuilder.generate(xml_builder_document, format: :none) end,
       "xml_builder indented" => fn -> XmlBuilder.generate(xml_builder_document) end
     }, time: 5)

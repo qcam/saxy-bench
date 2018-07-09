@@ -27,7 +27,7 @@ defmodule Mix.Tasks.Bench.Encode.Simple do
       ])
 
     Benchee.run(%{
-      "saxy" => fn -> Saxy.Encoder.encode(saxy_document) end,
+      "saxy" => fn -> Saxy.encode!(saxy_document) end,
       "xml_builder" => fn -> XmlBuilder.generate(xml_builder_document) end
     }, time: 5)
   end
