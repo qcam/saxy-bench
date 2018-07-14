@@ -138,3 +138,99 @@ saxy.stream           0.189 - 1.31x slower
 erlsom.stream         0.160 - 1.54x slower
 erlsom.binary         0.133 - 1.86x slower
 ```
+
+## Encoding
+
+### `mix bench.encode.simple`
+
+```
+Operating System: macOS
+CPU Information: Intel(R) Core(TM) i7-6567U CPU @ 3.30GHz
+Number of Available Cores: 4
+Available memory: 16 GB
+Elixir 1.6.5
+Erlang 20.3.4
+Benchmark suite executing with the following configuration:
+warmup: 2 s
+time: 5 s
+parallel: 1
+inputs: none specified
+Estimated total run time: 14 s
+
+
+Benchmarking saxy...
+Benchmarking xml_builder...
+
+Name                  ips        average  deviation         median         99th %
+saxy              14.39 K       69.48 μs    ±17.57%          66 μs         118 μs
+xml_builder        3.46 K      288.71 μs    ±13.61%         278 μs         450 μs
+
+Comparison:
+saxy              14.39 K
+xml_builder        3.46 K - 4.16x slower
+```
+
+### `mix bench.encode.nested`
+
+```
+Generated saxy_bench app
+Operating System: macOS
+CPU Information: Intel(R) Core(TM) i7-6567U CPU @ 3.30GHz
+Number of Available Cores: 4
+Available memory: 16 GB
+Elixir 1.6.5
+Erlang 20.3.4
+Benchmark suite executing with the following configuration:
+warmup: 2 s
+time: 5 s
+parallel: 1
+inputs: none specified
+Estimated total run time: 21 s
+
+
+Benchmarking saxy...
+Benchmarking xml_builder indented...
+Benchmarking xml_builder no format...
+
+Name                            ips        average  deviation         median         99th %
+saxy                         278.59        3.59 ms    ±11.67%        3.51 ms        5.42 ms
+xml_builder no format         14.09       70.97 ms     ±8.57%       69.40 ms       95.40 ms
+xml_builder indented           0.36     2790.85 ms     ±0.18%     2790.85 ms     2795.99 ms
+
+Comparison:
+saxy                         278.59
+xml_builder no format         14.09 - 19.77x slower
+xml_builder indented           0.36 - 777.51x slower
+```
+
+### `mix bench.encode.long`
+
+```
+Operating System: macOS
+CPU Information: Intel(R) Core(TM) i7-6567U CPU @ 3.30GHz
+Number of Available Cores: 4
+Available memory: 16 GB
+Elixir 1.6.5
+Erlang 20.3.4
+Benchmark suite executing with the following configuration:
+warmup: 2 s
+time: 5 s
+parallel: 1
+inputs: none specified
+Estimated total run time: 21 s
+
+
+Benchmarking saxy...
+Benchmarking xml_builder indented...
+Benchmarking xml_builder no format...
+
+Name                            ips        average  deviation         median         99th %
+saxy                        1138.55        0.88 ms    ±29.18%        0.81 ms        2.00 ms
+xml_builder no format        659.89        1.52 ms     ±5.37%        1.47 ms        1.84 ms
+xml_builder indented         651.91        1.53 ms     ±7.56%        1.48 ms        2.03 ms
+
+Comparison:
+saxy                        1138.55
+xml_builder no format        659.89 - 1.73x slower
+xml_builder indented         651.91 - 1.75x slower
+```
