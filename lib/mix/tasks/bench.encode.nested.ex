@@ -2,8 +2,6 @@ defmodule Mix.Tasks.Bench.Encode.Nested do
   use Mix.Task
 
   def run(_args) do
-
-
     Benchee.run(%{
       "saxy" => fn ->
         saxy_document =
