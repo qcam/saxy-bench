@@ -162,17 +162,18 @@ Benchmarking saxy...
 Benchmarking xml_builder...
 
 Name                  ips        average  deviation         median         99th %
-saxy             531.20 K        1.88 μs  ±2607.67%           2 μs           3 μs
-xml_builder       58.35 K       17.14 μs   ±123.35%          16 μs       38.96 μs
+saxy              14.39 K       69.48 μs    ±17.57%          66 μs         118 μs
+xml_builder        3.46 K      288.71 μs    ±13.61%         278 μs         450 μs
 
 Comparison:
-saxy             531.20 K
-xml_builder       58.35 K - 9.10x slower
+saxy              14.39 K
+xml_builder        3.46 K - 4.16x slower
 ```
 
 ### `mix bench.encode.nested`
 
 ```
+Generated saxy_bench app
 Operating System: macOS
 CPU Information: Intel(R) Core(TM) i7-6567U CPU @ 3.30GHz
 Number of Available Cores: 4
@@ -192,14 +193,14 @@ Benchmarking xml_builder indented...
 Benchmarking xml_builder no format...
 
 Name                            ips        average  deviation         median         99th %
-saxy                        7067.60      0.00014 s    ±12.67%      0.00014 s      0.00022 s
-xml_builder no format         42.14       0.0237 s     ±6.64%       0.0236 s       0.0265 s
-xml_builder indented           0.39         2.56 s     ±0.13%         2.56 s         2.57 s
+saxy                         278.59        3.59 ms    ±11.67%        3.51 ms        5.42 ms
+xml_builder no format         14.09       70.97 ms     ±8.57%       69.40 ms       95.40 ms
+xml_builder indented           0.36     2790.85 ms     ±0.18%     2790.85 ms     2795.99 ms
 
 Comparison:
-saxy                        7067.60
-xml_builder no format         42.14 - 167.72x slower
-xml_builder indented           0.39 - 18114.15x slower
+saxy                         278.59
+xml_builder no format         14.09 - 19.77x slower
+xml_builder indented           0.36 - 777.51x slower
 ```
 
 ### `mix bench.encode.long`
@@ -224,12 +225,12 @@ Benchmarking xml_builder indented...
 Benchmarking xml_builder no format...
 
 Name                            ips        average  deviation         median         99th %
-saxy                        1804.05        0.55 ms    ±19.71%        0.51 ms        0.95 ms
-xml_builder indented         700.51        1.43 ms     ±7.49%        1.41 ms        1.84 ms
-xml_builder no format        695.21        1.44 ms    ±10.44%        1.41 ms        2.04 ms
+saxy                        1138.55        0.88 ms    ±29.18%        0.81 ms        2.00 ms
+xml_builder no format        659.89        1.52 ms     ±5.37%        1.47 ms        1.84 ms
+xml_builder indented         651.91        1.53 ms     ±7.56%        1.48 ms        2.03 ms
 
 Comparison:
-saxy                        1804.05
-xml_builder indented         700.51 - 2.58x slower
-xml_builder no format        695.21 - 2.59x slower
+saxy                        1138.55
+xml_builder no format        659.89 - 1.73x slower
+xml_builder indented         651.91 - 1.75x slower
 ```

@@ -6,10 +6,10 @@ defmodule Mix.Tasks.Bench.Encode.Long do
 
     Benchee.run(%{
       "saxy" => fn ->
-        saxy_document = Saxy.Builder.element(
+        saxy_document = Saxy.XML.element(
           "root",
           [],
-          Saxy.Builder.element("data", [], long_content)
+          Saxy.XML.element("data", [], long_content)
         )
         Saxy.encode!(saxy_document)
       end,
