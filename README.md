@@ -34,37 +34,49 @@ Estimated total run time: 24 s
 #### [Hackernoon RSS](https://hackernoon.com/feed)
 
 ```
-Name             ips        average  deviation         median         99th %
-saxy          437.79        2.28 ms     ±8.48%        2.22 ms        3.21 ms
-erlsom        275.23        3.63 ms    ±16.01%        3.71 ms        5.03 ms
+Name               ips        average  deviation         median         99th %
+exomler        2270.16        0.44 ms     ±8.58%        0.43 ms        0.61 ms
+saxy            530.25        1.89 ms     ±4.79%        1.87 ms        2.10 ms
+erlsom          340.88        2.93 ms    ±16.55%        3.01 ms        4.11 ms
+meeseeks        236.90        4.22 ms     ±4.89%        4.19 ms        4.92 ms
 
 Comparison:
-saxy          437.79
-erlsom        275.23 - 1.59x slower
+exomler        2270.16
+saxy            530.25 - 4.28x slower
+erlsom          340.88 - 6.66x slower
+meeseeks        236.90 - 9.58x slower
 ```
 
 ### [/r/sweden Reddit RSS (Unicode characters)](https://www.reddit.com/r/sweden/.rss)
 
 ```
-Name             ips        average  deviation         median         99th %
-saxy          582.05        1.72 ms    ±12.19%        1.65 ms        2.80 ms
-erlsom        386.85        2.59 ms    ±18.56%        2.69 ms        4.12 ms
+Name               ips        average  deviation         median         99th %
+saxy            791.08        1.26 ms    ±11.38%        1.22 ms        1.92 ms
+erlsom          522.45        1.91 ms    ±20.71%        1.86 ms        3.07 ms
+exomler         447.38        2.24 ms     ±5.42%        2.22 ms        2.62 ms
+meeseeks        279.84        3.57 ms     ±6.87%        3.51 ms        4.90 ms
 
 Comparison:
-saxy          582.05
-erlsom        386.85 - 1.50x slower
+saxy            791.08
+erlsom          522.45 - 1.51x slower
+exomler         447.38 - 1.77x slower
+meeseeks        279.84 - 2.83x slower
 ```
 
 ### Nested XML document
 
 ```
-Name             ips        average  deviation         median         99th %
-saxy           15.37       65.08 ms     ±5.36%       64.98 ms       76.18 ms
-erlsom          3.53      283.09 ms     ±1.28%      282.47 ms      294.30 ms
+Name               ips        average  deviation         median         99th %
+saxy             18.77       53.28 ms     ±5.88%       53.10 ms       62.19 ms
+meeseeks          7.13      140.17 ms     ±6.23%      138.82 ms      190.32 ms
+exomler           6.43      155.40 ms     ±1.83%      155.34 ms      168.21 ms
+erlsom            4.14      241.55 ms     ±2.06%      241.98 ms      250.00 ms
 
 Comparison:
-saxy           15.37
-erlsom          3.53 - 4.35x slower
+saxy             18.77
+meeseeks          7.13 - 2.63x slower
+exomler           6.43 - 2.92x slower
+erlsom            4.14 - 4.53x slower
 ```
 
 ## Simple Form parsing
@@ -72,37 +84,55 @@ erlsom          3.53 - 4.35x slower
 #### [Hackernoon RSS](https://hackernoon.com/feed)
 
 ```
-Name             ips        average  deviation         median         99th %
-saxy          421.99        2.37 ms     ±9.78%        2.29 ms        3.72 ms
-erlsom        286.80        3.49 ms    ±15.11%        3.79 ms        4.46 ms
+Name               ips        average  deviation         median         99th %
+exomler        2213.38        0.45 ms     ±7.05%        0.45 ms        0.57 ms
+saxy            525.08        1.90 ms     ±4.59%        1.88 ms        2.15 ms
+erlsom          372.05        2.69 ms    ±16.09%        2.97 ms        3.36 ms
+meeseeks        237.52        4.21 ms     ±4.11%        4.18 ms        4.96 ms
+xmerl            61.58       16.24 ms    ±15.60%       15.56 ms       24.06 ms
 
 Comparison:
-saxy          421.99
-erlsom        286.80 - 1.47x slower
+exomler        2213.38
+saxy            525.08 - 4.22x slower
+erlsom          372.05 - 5.95x slower
+meeseeks        237.52 - 9.32x slower
+xmerl            61.58 - 35.94x slower
 ```
 
 ### [/r/sweden Reddit RSS (Unicode characters)](https://www.reddit.com/r/sweden/.rss)
 
 ```
-Name             ips        average  deviation         median         99th %
-saxy          565.88        1.77 ms    ±12.68%        1.70 ms        2.98 ms
-erlsom        409.14        2.44 ms    ±22.06%        2.24 ms        4.11 ms
+Name               ips        average  deviation         median         99th %
+saxy            750.28        1.33 ms     ±8.03%        1.30 ms        1.66 ms
+erlsom          481.57        2.08 ms    ±23.62%        1.84 ms        3.26 ms
+exomler         444.24        2.25 ms     ±7.02%        2.23 ms        2.73 ms
+meeseeks        269.00        3.72 ms     ±6.22%        3.68 ms        4.37 ms
+xmerl           112.03        8.93 ms     ±8.93%        8.63 ms       10.94 ms
 
 Comparison:
-saxy          565.88
-erlsom        409.14 - 1.38x slower
+saxy            750.28
+erlsom          481.57 - 1.56x slower
+exomler         444.24 - 1.69x slower
+meeseeks        269.00 - 2.79x slower
+xmerl           112.03 - 6.70x slower
 ```
 
 ### Nested XML document
 
 ```
-Name             ips        average  deviation         median         99th %
-saxy           14.09       70.96 ms     ±5.30%       70.90 ms       77.98 ms
-erlsom          3.05      327.58 ms     ±1.18%      327.04 ms      337.97 ms
+Name               ips        average  deviation         median         99th %
+saxy             17.37       57.58 ms     ±7.18%       57.13 ms       72.39 ms
+meeseeks          7.18      139.30 ms     ±2.47%      138.76 ms      148.10 ms
+exomler           6.36      157.35 ms     ±3.51%      156.23 ms      193.53 ms
+xmerl             3.88      257.83 ms     ±9.13%      245.73 ms      334.42 ms
+erlsom            3.64      274.71 ms     ±1.75%      273.99 ms      297.76 ms
 
 Comparison:
-saxy           14.09
-erlsom          3.05 - 4.62x slower
+saxy             17.37
+meeseeks          7.18 - 2.42x slower
+exomler           6.36 - 2.73x slower
+xmerl             3.88 - 4.48x slower
+erlsom            3.64 - 4.77x slower
 ```
 
 ## Streaming parsing

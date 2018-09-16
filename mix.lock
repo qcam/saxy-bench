@@ -6,6 +6,6 @@
   "meeseeks": {:git, "https://github.com/mischov/meeseeks.git", "92ae86c9735a87ad27abaef0e3a98b00af4de01d", []},
   "meeseeks_html5ever": {:hex, :meeseeks_html5ever, "0.10.0", "3cac0c19800f0e2987c69b5c6b2a8dd62e171c606dc301aa4b3f686b79894ba4", [:mix], [{:rustler, "~> 0.18.0", [hex: :rustler, repo: "hexpm", optional: false]}], "hexpm"},
   "rustler": {:hex, :rustler, "0.18.0", "db4bd0c613d83a1badc31be90ddada6f9821de29e4afd15c53a5da61882e4f2d", [:mix], [], "hexpm"},
-  "saxy": {:git, "https://github.com/qcam/saxy.git", "7266632e9407842f28ffac254c56dc41210a5690", []},
+  "saxy": {:git, "https://github.com/qcam/saxy.git", "4c490b5ddbf637a0cdcf844ab3e7539856e39eec", []},
   "xml_builder": {:hex, :xml_builder, "2.1.0", "c249d5339427c13cae11e9d9d0e8b40d25d228b9ecc54029f24017385e60280b", [:mix], [], "hexpm"},
 }
