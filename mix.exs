@@ -24,6 +24,8 @@ defmodule SaxyBench.MixProject do
       {:saxy, github: "qcam/saxy"},
       {:erlsom, "~> 1.4"},
       {:xml_builder, "~> 2.0"},
+      {:exomler, github: "vkletsko/exomler"},
+      {:meeseeks, github: "mischov/meeseeks"},
       {:benchee, ">= 0.0.0"}
     ]
   end

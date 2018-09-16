@@ -27,7 +27,9 @@ defmodule Mix.Tasks.Bench.Binary do
 
         Benchee.run(%{
           "saxy"    => fn -> {:ok, _state} = Saxy.parse_string(xml, EventHandler, []) end,
-          "erlsom" => fn -> {:ok, _, _} = :erlsom.parse_sax(xml, [], &EventHandler.handle_event/2) end
+          "erlsom" => fn -> {:ok, _, _} = :erlsom.parse_sax(xml, [], &EventHandler.handle_event/2) end,
+          "exomler" => fn -> :exomler.decode(xml) end,
+          "meeseeks" => fn -> Meeseeks.parse(xml) end
         }, time: 10)
     end
   end
