@@ -1,6 +1,8 @@
 # Saxy Bench
 
-The benchmarking suite of [Saxy](https://github.com/qcam/saxy).
+The previous benchmarking suite of [Saxy](https://github.com/qcam/saxy).
+
+**NOTE:** This repo is archived. The suite has been moved to [Saxy](https://github.com/qcam/saxy).
 
 ## TL;DR report
 
